@@ -53,7 +53,7 @@ def getid():
             return render_template("getid.html", video_results = video_results, channel_results = channel_results)
         
         else:
-            flash("Invalid URL. Please enter a valid YouTube video or channel URL.")
+            flash("Invalid URL. Please enter a valid YouTube video.")
             return render_template("index.html")
         
         

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block main %}
+<div class="content-container">
+    <div class="embed">
+        <iframe width="560" height="315" src="//www.youtube.com/embed/{{ video_results.id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="results_table">
+        <table class="table table-sm">
+            <tr>
+            <td>Video id:</td><td>{{ video_results.id }}</td><td><sl-copy-button value="{{ video_results.id }}"></sl-copy-button>
+
+            </td>
+            </tr>
+            <td>Title:</td><td>{{ video_results.title }}</td>
+            <tr>
+            <td>Published at:</td><td>{{ video_results.publishedAt }}</td>
+            </tr>
+            <tr>
+            <td>Views:</td><td>{{ video_results.viewCount | number }}</td>
+            </tr>
+            <tr>
+            <td>Likes:</td><td>{{ video_results.likeCount | number }}</td>
+            </tr>
+            <tr style="border-bottom: 2px solid black;">
+            <td>Comments:</td><td>{{ video_results.commentCount | number }}</td>
+            </tr>
+            <tr>
+                <td>Channel id:</td><td>{{ video_results.channelId }}</td><td><sl-copy-button value="{{ video_results.channelId }}"></sl-copy-button>
+                </td>
+            </tr>
+            <tr>
+            <td>Channel Title:</td><td>{{ video_results.channel }}</td>
+            </tr>
+            <tr>
+                <td>Published at:</td><td>{{ channel_results.publishedAt }}</td>
+            </tr>
+            <tr>
+                <td># of videos:</td><td>{{ channel_results.videoCount | number }}</td>
+            </tr>
+            <tr>
+                <td>Subscribers:</td><td>{{ channel_results.subscriberCount | number }}</td>
+            </tr>
+            <tr>
+                <td>Channel Views:</td><td>{{ channel_results.viewCount | number }}</td>
+            </tr>
+        
+        </table>
+    </div>
+</div>
+
+<h1>Search another?</h1>
+<form action="/" method="post">
+    <div class="container">
+        <div class="searchbar">
+            <input name="link" type="text" class="form-control" id="link"  placeholder="Enter YouTube video link..." autofocus>
+        </div>
+        <br>
+        <sl-button type="submit">Submit</sl-button>
+    </div>
+  </form>
+
+{% endblock %}

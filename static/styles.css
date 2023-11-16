@@ -1,0 +1,102 @@
+.alert {
+    text-align: center;
+}
+
+button:hover {
+    color: #914586;
+}
+
+.container {
+    padding: 5px;
+    text-align: center;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52vh; 
+}
+
+.contactform {
+    padding: 52px;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.nav-item {
+    text-align: right;
+}
+
+.nav-link {
+    color: #52164b;
+    text-align: right;
+}
+
+.nav-link {
+    color: #52164b;
+    text-align: right;
+    transition: color 0.3s; 
+}
+
+.nav-link:hover {
+    color: #914586; 
+}
+
+.nav-link:active {
+    color: #52164b;
+}
+
+p {
+    margin: 25px 50px 75px 100px;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table{
+    width: auto;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+table{
+    text-align: left;
+}
+
+table > tbody > tr > td:first-child {
+    font-weight: bold;
+}
+
+.embed {
+    text-align: left;
+    display: inline;
+    float: left;
+    margin-right: 20px;
+}
+
+.footer {
+    vertical-align: middle;
+    text-align: center;
+    clear: both;
+}
+
+.results_table {
+    /* display: inline; */
+    width: auto;
+    margin-left: 11px;
+}
+
+.mylinks {
+    padding-left: 184px;
+    padding-right: 700px;
+}
+
+h1 {
+    text-align: center;
+}

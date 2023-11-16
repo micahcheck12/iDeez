@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+
+
+      
+        <div class="alert alert-dark" role="alert">
+          {% for message in messages %}
+            {{ message }}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    <br>
+    <br>
+      <form action="/" method="post">
+        <div class="container">
+            <div class="searchbar">
+                <input name="link" type="text" class="form-control" id="link"  placeholder="Enter YouTube video link..." autofocus>
+            </div>
+            <br>
+            <sl-button type="submit">Submit</sl-button>
+        </div>
+      </form>
+
+{% endblock %}

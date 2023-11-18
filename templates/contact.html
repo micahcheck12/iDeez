@@ -5,38 +5,41 @@
 {% endblock %}
 
 {% block main %}
-<div class="contactform">
+    <div class="contactform">
 
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-        <div class="flash-messages">
-            {% for message in messages %}
-                <div class="flash-message">{{ message }}</div>
-            {% endfor %}
-            
-    <form action="/mail" id="contact_form" name="contact_form" method="post">
-        <div class="mb-5 row">
-            <div class="col">
-                <label>First Name</label>
-                <input type="text" required maxlength="50" class="form-control" id="first_name" name="first_name">
-            <br>
-                <label>Last Name</label>
-                <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
-                <br>
-                <label for="email_addr">Email address</label>
-                <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
-                    placeholder="name@example.com">
-                    <br>
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="5"></textarea>
-            <br>
-                <div class="captcha-container">
-                    <div class="g-recaptcha" data-sitekey="6LdTGRQpAAAAAOPVe48B0IQtv-UCcMhhdRV4grvk"></div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
                 </div>
-                <br />
-                <sl-button type="submit">Send</sl-button>
-        </div>
-    </form>
-</div>
+            {% endif %}
+        {% endwith %}
 
+        <form action="/mail" id="contact_form" name="contact_form" method="post">
+            <div class="mb-5 row">
+                <div class="col">
+                    <label>First Name</label>
+                    <input type="text" required maxlength="50" class="form-control" id="first_name" name="first_name">
+                    <br>
+                    <label>Last Name</label>
+                    <input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name">
+                    <br>
+                    <label for="email_addr">Email address</label>
+                    <input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+                           placeholder="name@example.com">
+                    <br>
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                    <br>
+                    <div class="captcha-container">
+                        <div class="g-recaptcha" data-sitekey="6LdTGRQpAAAAAOPVe48B0IQtv-UCcMhhdRV4grvk"></div>
+                    </div>
+                    <br />
+                    <sl-button type="submit">Send</sl-button>
+                </div>
+            </div>
+        </form>
+    </div>
 {% endblock %}

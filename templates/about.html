@@ -5,16 +5,33 @@
 {% endblock %}
 
 {% block main %}
-
-<p>
-    Welcome to iDeez!  iDeez was created and launched by Micah Lawrence in November of 2023.  Micah works in the music industry working as a Product Manager at Anthem Entertainment.  
-    Through his work in digital rights management, he noticed that it was a cumbersome process to get the video IDs and channel IDs needed to register music with YouTube's contentID.
-</p>
-<p>
-    With the goal of expanding his technical knowledge of product and software development, Micah began taking Harvard's <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50: Introduction to Computer Science</a> class taught by David Malan.
-    When it came time to work on the final project, Micah thought it was a great opportunity to solve this real world problem he'd experienced.
-    With the skills he learned in CS50, we created a web application that utilizes Google's YouTube Data API to easily access ids for videos and channels making it much easier to whitelist certain videos and channels for music licensing to avoid claims on ContendID.
-</p>
+<div class="aboutsection">
+    <p>
+        iDeez was created and launched by Micah Lawrence in December 2023.  Micah currently works in the music industry as a Product Manager at <a href="https://anthementertainment.com/">Anthem Entertainment</a> primarly working with the production music libraries <a href="https://jinglepunks.com/">Jingle Punks</a> and <a href="https://www.5alarmmusic.com/">5 Alarm Music</a>.
+        Through his work in music licensing, he was introduced to digital music rights management, which is the use of technology to control and manage access to copyrighted material. He noticed that it was a cumbersome process to get the video IDs and channel IDs in YouTube which are needed to facilitate the handling of copyright claims in YouTube's digital rights manager, ContentID. 
+    </p>
+    <div class="image-container">
+        <img src="static/youtubecontentid.png">
+    </div>
+    <p>
+        With the goal of expanding his technical knowledge of product and software development, Micah began taking Harvard's <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50: Introduction to Computer Science</a> class taught by David Malan.  The goal of the course is to teach students to think algorithmically and solve problems efficiently.  In the class, Micah learned about abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. As part of the course, he familiarized himself with several languages include C, Python, SQL, and HTML, CSS and JavaScript.
+    </p>
+    <div class="image-container">
+        <img src="static/cs50.png">
+    </div>
+    <p>
+        The class culimates in a final project where students are invited to develop their very own piece of software that interests them, solves an actual problem, impacts the community or changes the world.  Micah thought it was a great opportunity to solve this real world problem he'd experienced in managing copyright assets on social media.  
+    </p>
+    <p>
+        With the skills he learned, he created a web application that utilizes Google's YouTube Data API to easily access ids for videos and channels.  With these ids, it is much easier to whitelist certain videos and channels for music licensing to avoid copyright claims on ContendID when the content creator has a legitimate music license.  iDeez also provides additional data and statistics about the video and channel that help users learn more about the audience and scope of the music license or music infringement. 
+    </p>
+    <p>
+        As more and more content consumption moves to social media platforms, it is important that artists and songwriters are able to manage their copyrighted works.  Be it from traditional licensing or by sharing in advertising revenue from unauthorized usages, artists should be able to be compensated when their works are used in content.  iDeez hopes to make it easier for you to manage your assets efficiently and effectively.  
+    </p>
+    <div class="image-container">
+        <img src="static/bythenumbers.png">
+    </div>
+</div>
 
 {% endblock %}
 

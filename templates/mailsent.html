@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+
+<h2>Mail sent!</h2>
+<br>
+<h3>Want to get some iDeez?</h3>
+<form action="/" method="post">
+    <div class="container">
+        <div class="searchbar">
+            <input name="link" type="text" class="form-control" id="link"  placeholder="Enter YouTube video link..." autofocus>
+        </div>
+        <br>
+        <sl-button type="submit">Submit</sl-button>
+    </div>
+  </form>
+
+{% endblock %}

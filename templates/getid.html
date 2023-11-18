@@ -16,44 +16,44 @@
 
             </td>
             </tr>
-            <td>Title:</td><td>{{ video_results.title }}</td>
+            <td>Title:</td><td>{{ video_results.title }}</td><td></td>
             <tr>
-            <td>Published at:</td><td>{{ video_results.publishedAt }}</td>
+            <td>Published at:</td><td>{{ video_results.publishedAt }}</td><td></td>
             </tr>
             <tr>
-            <td>Views:</td><td>{{ video_results.viewCount | number }}</td>
+            <td>Views:</td><td>{{ video_results.viewCount | number }}</td><td></td>
             </tr>
             <tr>
-            <td>Likes:</td><td>{{ video_results.likeCount | number }}</td>
+            <td>Likes:</td><td>{{ video_results.likeCount | number }}</td><td></td>
             </tr>
             <tr style="border-bottom: 2px solid black;">
-            <td>Comments:</td><td>{{ video_results.commentCount | number }}</td>
+            <td>Comments:</td><td>{{ video_results.commentCount | number }}</td><td></td>
             </tr>
             <tr>
                 <td>Channel id:</td><td>{{ video_results.channelId }}</td><td><sl-copy-button value="{{ video_results.channelId }}"></sl-copy-button>
                 </td>
             </tr>
             <tr>
-            <td>Channel Title:</td><td>{{ video_results.channel }}</td>
+            <td>Channel Title:</td><td>{{ video_results.channel }}</td><td></td>
             </tr>
             <tr>
-                <td>Published at:</td><td>{{ channel_results.publishedAt }}</td>
+                <td>Published at:</td><td>{{ channel_results.publishedAt }}</td><td></td>
             </tr>
             <tr>
-                <td># of videos:</td><td>{{ channel_results.videoCount | number }}</td>
+                <td># of videos:</td><td>{{ channel_results.videoCount | number }}</td><td></td>
             </tr>
             <tr>
-                <td>Subscribers:</td><td>{{ channel_results.subscriberCount | number }}</td>
+                <td>Subscribers:</td><td>{{ channel_results.subscriberCount | number }}</td><td></td>
             </tr>
             <tr>
-                <td>Channel Views:</td><td>{{ channel_results.viewCount | number }}</td>
+                <td>Channel Views:</td><td>{{ channel_results.viewCount | number }}</td><td></td>
             </tr>
         
         </table>
     </div>
 </div>
 
-<h1>Search another?</h1>
+<h2>Get more iDeez?</h2>
 <form action="/" method="post">
     <div class="container">
         <div class="searchbar">

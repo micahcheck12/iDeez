@@ -154,13 +154,12 @@ a:hover {
     display: block;  /* Removes extra space below the image caused by the default inline display */
   }
 
-  .captcha-container {
+  .form-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px; /* Adjust as needed */
+    align-items: flex-start;
   }
   
-  .g-recaptcha {
+  .captcha-container {
     margin-bottom: 10px; /* Adjust as needed */
   }

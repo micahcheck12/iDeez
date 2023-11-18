@@ -153,3 +153,14 @@ a:hover {
     height: auto;    /* Maintains the aspect ratio when scaling down */
     display: block;  /* Removes extra space below the image caused by the default inline display */
   }
+
+  .captcha-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  .g-recaptcha {
+    margin-bottom: 10px; /* Adjust as needed */
+  }

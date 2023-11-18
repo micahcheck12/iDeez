@@ -6,6 +6,8 @@ from googleconnect import videoid, channelid, number
 
 import smtplib
 
+import requests
+
 from email.message import EmailMessage
 
 app = Flask(__name__)

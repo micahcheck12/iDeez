@@ -11,12 +11,10 @@ import requests
 from email.message import EmailMessage
 
 app = Flask(__name__)
-app.secret_key = '8627895d4de75d0ceabd9fae7c2d3c51786653b77ed970a08946d84f895b12f4'
-
+app.config.from_pyfile("secrets.py")
+app.secret_key = app.config["KEY"] 
 
 app.jinja_env.filters["number"] = number
-
-##mail = Mail(app)
 
 @app.route("/", methods=["GET", "POST"])
 def getid():
@@ -84,7 +82,7 @@ def mail():
         message = request.form.get('message')
         recaptcha_response = request.form.get('g-recaptcha-response')  
 
-        recaptcha_secret_key = '6LdTGRQpAAAAALbj-oGiHAoPCI6s2oYjie0YmLB8'  
+        recaptcha_secret_key = app.config["RECAPTCHA_SECRET_KEY"] 
         recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'
         recaptcha_data = {
             'secret': recaptcha_secret_key,
@@ -112,8 +110,8 @@ def mail():
             s.ehlo()
             s.starttls()
 
-            username = 'contactideez@gmail.com'
-            password = 'umvc rvif sodl lgrk'
+            username = app.config["USERNAME"] 
+            password = app.config["PASSWORD"] 
             s.login(username, password)
 
             s.send_message(msg)

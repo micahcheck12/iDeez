@@ -1,3 +1,5 @@
+from flask import current_app as app 
+
 import os
 
 
@@ -14,9 +16,9 @@ def channelid(my_channel_id):
     api_service_name = "youtube"
     api_version = "v3"
 
+    developerKey = app.config["GOOGLEDEVELOPERKEY"]
 
-    youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey="AIzaSyAZn5LdXzYkpF2cp_qMaF6ei_TTDHxafFY")
-
+    youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=developerKey)
 
     request = youtube.channels().list(
         part="snippet,contentDetails,statistics",
@@ -50,8 +52,9 @@ def videoid(video_id):
     api_service_name = "youtube"
     api_version = "v3"
 
-    youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey="AIzaSyAZn5LdXzYkpF2cp_qMaF6ei_TTDHxafFY")
+    developerKey = app.config["GOOGLEDEVELOPERKEY"]
 
+    youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=developerKey)
 
     request = youtube.videos().list(
         part="snippet,contentDetails,statistics",
@@ -62,15 +65,15 @@ def videoid(video_id):
     myitem = response["items"][0]
 
     video_data = {
-    "id": myitem["id"],
-    "title": myitem["snippet"]["title"],
-    "channel": myitem["snippet"]["channelTitle"],
-    "channelId": myitem["snippet"]["channelId"],
-    "publishedAt": myitem["snippet"]["publishedAt"],
-    "viewCount": myitem["statistics"]["viewCount"],
-    "likeCount": myitem["statistics"]["likeCount"],
-    "commentCount": myitem["statistics"]["commentCount"]
-}
+        "id": myitem["id"],
+        "title": myitem["snippet"]["title"],
+        "channel": myitem["snippet"]["channelTitle"],
+        "channelId": myitem["snippet"]["channelId"],
+        "publishedAt": myitem["snippet"]["publishedAt"],
+        "viewCount": myitem["statistics"]["viewCount"],
+        "likeCount": myitem["statistics"]["likeCount"],
+        "commentCount": myitem["statistics"]["commentCount"]
+    }
     
     return video_data 
     

@@ -124,3 +124,7 @@ def mail():
 
     else:
         return render_template("contact.html")
+
+@app.route("/test")
+def test():  
+    return render_template('test.html')

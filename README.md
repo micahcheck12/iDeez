@@ -1,5 +1,5 @@
 # iDeez
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://youtu.be/4s7-Pf_gi4M
 #### Description:
 I came up with the idea for iDeez to solve a problem that I currently am experiencing at my work.  I work as a Product Manager for a company that does music licensing for TV, film and advertising.  Through my work with the company I work at, I vetted companies to help us manage our digital music rights, which is the use of technology to control and manage access to copyrighted material.  
 
